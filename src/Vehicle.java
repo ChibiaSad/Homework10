@@ -9,20 +9,12 @@ abstract class Vehicle implements Service {
         } else throw new RuntimeException("колеса должны быть");
     }
 
-    public String getModelName() {
-        return modelName;
-    }
-
-    public int getWheelsCount() {
-        return wheelsCount;
-    }
-
     abstract void updateTyre();
     @Override
     public void check() {
-        System.out.println("Обслуживаем " +this.getModelName());
-        for (int i = 0; i < this.getWheelsCount(); i++) {
-            this.updateTyre();
+        System.out.println("Обслуживаем " + modelName);
+        for (int i = 0; i < wheelsCount; i++) {
+            updateTyre();
         }
     }
 }
