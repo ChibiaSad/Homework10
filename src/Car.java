@@ -1,4 +1,4 @@
-public class Car extends Vehicle {
+public class Car extends Vehicle{
     public Car(String modelName, int wheelsCount) {
         super(modelName, wheelsCount);
     }
@@ -10,5 +10,11 @@ public class Car extends Vehicle {
     @Override
     public void updateTyre() {
         System.out.println("меняем покрышку");
+    }
+
+    @Override
+    public void check() {
+        super.check();
+        checkEngine();
     }
 }
